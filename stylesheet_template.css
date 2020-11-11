@@ -1,0 +1,112 @@
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-column-gap: 35px;
+  grid-row-gap: 10px;
+  justify-content: center;
+}
+
+.pic {
+   width: inherit;
+   height: auto;
+}
+
+@media only screen and (min-device-width: 500px) {
+  .pic {
+    width: auto;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+.menu-box {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.gallery-box {
+  width: 100%;
+  padding-top: 20px;
+}
+
+
+.title {
+  color: #2F4F4F;
+  text-align: left;
+  font-size: 16px;
+}
+
+.intro {
+  color: #2F4F4F;
+  text-align: left;
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+} 
+
+a {
+  display: inline-block;
+  color: white;
+  text-align: left;
+  font-size: 42px;
+  text-decoration: none; 
+}
+
+@media only screen and (min-device-width: 500px) {
+  a {
+    display: inline-block;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    text-decoration: none; 
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+
+li {
+  float: left;
+  display: inline-block;
+  color: white;
+  padding: 14px 16px;
+  font-size: 42px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+@media only screen and (min-device-width: 500px) {
+  li {
+    float: left;
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-family: "Lucida Console", Courier, monospace;
+  }
+}
+
+.active {
+      background-color: #4CAF50;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+.menu-options {
+    display: inline-block;
+    margin: 0 auto;
+}
