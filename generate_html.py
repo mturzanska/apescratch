@@ -10,21 +10,25 @@ import random
 #       make it into a cli, with test and deploy options
 
 
+# Inputs
+PICS_DIR = os.getenv('APESCRATCH_PICS_DIR')
+PIC_HTMLS_DIR = os.getenv('APESCRATCH_PIC_HTMLS_DIR')
+THUMBNAILS_DIR = os.getenv('APESCRATCH_THUMBNAILS_DIR')
+CSS_INPUT = 'stylesheet_template.css'
+HTML_INPUT = 'home_template.html'
 
-# TODO: put these in envvars
-PICS_DIR = 'outputs'
-PIC_HTMLS_DIR = 'pic_htmls'
-THUMBNAILS_DIR = 'thumbnails'
+# Outputs
+CSS_OUTPUT = 'stylesheet.css'
+HTML_OUTPUT = 'index.html'
+
 
 pics = os.listdir(PICS_DIR)
 thumbnails = os.listdir(THUMBNAILS_DIR)
-cwd = os.getcwd()
-cwd_basename = os.path.basename(cwd)
 
-with open("home_template.html") as f:
+with open(HTML_INPUT) as f:
     html = f.read()
 
-with open("stylesheet_template.css") as f:
+with open(CSS_INPUT) as f:
     css = f.read()
 
 # TODO: move these templates to separate file
@@ -132,8 +136,8 @@ css_snippets = "\n".join(css_snippets)
 css = '\n'.join([css, css_snippets])
 
 
-with open("index.html", "w") as f:
+with open(HTML_OUTPUT, "w") as f:
     f.write(html)
 
-with open("stylesheet.css", "w") as f:
+with open(CSS_OUTPUT, "w") as f:
     f.write(css)
