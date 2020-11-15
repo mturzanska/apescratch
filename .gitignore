@@ -1,2 +1,7 @@
 # environment
 .venv
+
+# outputs
+index.html
+home.html
+stylesheet.css
