@@ -5,3 +5,6 @@
 index.html
 home.html
 stylesheet.css
+
+# execution debris
+__pycache__
